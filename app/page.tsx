@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main className="items-center ">
       <div>
-        {res.results.map((movie: any) => (
+        {res.results?.map((movie: any) => (
           <MovieInfo
             key={movie.id}
             id={movie.id}
