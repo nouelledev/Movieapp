@@ -13,18 +13,17 @@ type MovieProps = {
 const MovieInfo = (props: MovieProps) => {
   const imagePath = "https://image.tmdb.org/t/p/original";
   return (
-    <div className="">
+    <div className="w-full h-full mx-auto">
       <h1>{props.title}</h1>
       <h2>{props.release_date}</h2>
       <Link href={`/${props.id}`}>
         <Image
           src={imagePath + props.poster_path}
-          width={500}
-          height={500}
+          width={300}
+          height={300}
           alt={title}
         />
       </Link>
-      <p>{props.overview}</p>
     </div>
   );
 };
