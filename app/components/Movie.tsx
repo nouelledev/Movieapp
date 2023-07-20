@@ -18,8 +18,8 @@ const MovieInfo = (props: MovieProps) => {
       <Link href={`/${props.id}`}>
         <Image
           src={imagePath + props.poster_path}
-          width={800}
-          height={800}
+          width={250}
+          height={250}
           alt={title}
         />
       </Link>
