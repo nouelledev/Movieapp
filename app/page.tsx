@@ -7,6 +7,7 @@ export default async function Home() {
   );
   const res = await data.json();
   console.log(res);
+  console.log(res);
   return (
     <div className=" text-white w-full h-full">
       {res.results?.map((movie: any) => (
