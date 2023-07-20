@@ -9,7 +9,7 @@ export default async function Home() {
   console.log(res);
   console.log(res);
   return (
-    <div className=" text-white w-full h-full">
+    <div className=" text-white w-fit h-full">
       {res.results?.map((movie: any) => (
         <MovieInfo
           key={movie.id}
