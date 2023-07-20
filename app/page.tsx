@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import MovieInfo from "./components/Movie";
+
 export default async function Home() {
   const API_URL = "https://api.themoviedb.org/3";
   const TOP_RATED = "/movie/top_rated";
