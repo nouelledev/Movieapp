@@ -1,10 +1,24 @@
 import Image from "next/image";
 import { FC } from "react";
-export default function Home() {
+import MovieInfo from "./components/Movie";
+export default async function Home() {
+  const data = await fetch(
+    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
+  );
+  const res = await data.json();
+  console.log(res);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="items-center ">
       <div>
-        <h1>Tangina</h1>
+        {res.results.map((movie: any) => (
+          <MovieInfo
+            id={movie.id}
+            title={movie.title}
+            release_date={movie.release_date}
+            poster_path={movie.poster_path}
+            overview={movie.overview}
+          />
+        ))}
       </div>
     </main>
   );
