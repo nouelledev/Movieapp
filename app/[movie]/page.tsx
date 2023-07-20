@@ -10,7 +10,7 @@ export default async function MovieDetail({ params }: any) {
   return (
     <div>
       <div>
-        <h2 className="text-2xl">{res.title}</h2>
+        <h2 className="text-2xl text-white">{res.title}</h2>
       </div>
     </div>
   );
