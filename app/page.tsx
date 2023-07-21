@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MovieInfo from "./components/Movie";
-import getPopular from "./api/popular/route";
-import getTopRated from "./api/toprated/route";
+import getPopular from "./api/popularmovie";
+import getTopRated from "./api/topratedmovie";
 import Search from "./components/Search";
 export default async function Home() {
   const popularMovieData = await getPopular();
