@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
-const Search = () => {
+const Search = ({ params }: any) => {
+  const { movie } = params;
   return (
     <div className="flex flex-row">
-      <form className="rounded-md pt-5">
-        <input type="text" className="md:max-w-[210px] text-black"></input>
-        <button className="text-black bg-white">Search</button>
-      </form>
+      <h1>Hello you searched</h1>
     </div>
   );
 };

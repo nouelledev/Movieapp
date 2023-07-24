@@ -15,7 +15,7 @@ const MovieInfo = (props: MovieProps) => {
   return (
     <div className="w-full h-full mx-auto text-white">
       <h1 className="text-base ">{props.title}</h1>
-      <Link href={`/${props.id}`}>
+      <Link href={`/movie/${props.id}`}>
         <Image
           src={imagePath + props.poster_path}
           width={250}

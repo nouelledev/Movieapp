@@ -5,7 +5,6 @@ export default async function getPopular() {
   const res = await fetch(
     `${API_URL}/${POPULAR_MOVIE}?api_key=${process.env.API_KEY}&page=${PAGE_REQUEST}`
   );
-  console.log(res);
   if (!res.ok) {
     throw new Error("Failed to fetch data.");
   }
