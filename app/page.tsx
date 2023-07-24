@@ -11,12 +11,16 @@ export default function Home() {
     console.log(search);
     setSearch(e.target.value);
   };
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    router.push(`/search/${search}`);
+  };
   return (
     <div className="text-white max-w-[1400px] mx-auto px-4">
       <NavigationBar />
       <div className="mt-[15%] relative ">
         <div className="flex flex-row  mx-auto gap-3 relative">
-          <form onSubmit={() => router.push(`/search/${search}`)}>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               onChange={handleChange}
