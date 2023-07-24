@@ -5,7 +5,6 @@ export default async function searchResult({ params }: any) {
   const { keyword } = params;
   const API_URL = "https://api.themoviedb.org/3";
   const SEARCH_MOVIE = "/search/movie";
-  const imagePath = "https://image.tmdb.org/t/p/original";
   const data = await fetch(
     `${API_URL}/${SEARCH_MOVIE}?api_key=${process.env.API_KEY}&query=${keyword}`
   );
