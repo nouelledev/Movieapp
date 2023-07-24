@@ -1,6 +1,6 @@
 import React from "react";
 import getTopRated from "../api/topratedmovie";
-import MovieInfo from "./Movie";
+import MovieInfo from "./MovieInfo";
 
 export default async function PopularContainer() {
   const topRatedMovie = await getTopRated();

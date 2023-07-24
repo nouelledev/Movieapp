@@ -16,14 +16,14 @@ export default function Home() {
       <NavigationBar />
       <div className="mt-[15%] relative ">
         <div className="flex flex-row  mx-auto gap-3 relative">
-          <form>
+          <form onSubmit={() => router.push(`/search/${search}`)}>
             <input
               type="text"
               onChange={handleChange}
               placeholder="Enter keywords..."
               className="w-[1300px] h-[50px] rounded-md text-black outline-none"
             ></input>
-            <button onClick={() => router.push(`/search/${search}`)}>
+            <button type="submit">
               <BsSearch
                 size={50}
                 className="w-[100px] bg-blue-500 absolute top-0 rounded-md right-0"

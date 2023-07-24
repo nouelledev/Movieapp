@@ -1,6 +1,6 @@
 import React from "react";
 import getPopular from "../api/popularmovie";
-import MovieInfo from "./Movie";
+import MovieInfo from "./MovieInfo";
 
 export default async function TrendingContainer() {
   const popularMovieData = await getPopular();
